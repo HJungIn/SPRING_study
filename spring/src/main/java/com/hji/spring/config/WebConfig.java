@@ -10,5 +10,6 @@ public class WebConfig implements WebMvcConfigurer{ // 뷰 컨트롤러의 역�
     @Override
     public void addViewControllers(ViewControllerRegistry registry){ // ViewControllerRegistry : 하나 이상의 뷰 컨트롤러를 등록하기 위해 사용할 수 있다.
         registry.addViewController("/").setViewName("home"); // "/"경로의 요청이 전달되어야 하는 뷰로 "home"을 지정한다.
+        // registry.addViewController("/login").setViewName("login");
     }
 }

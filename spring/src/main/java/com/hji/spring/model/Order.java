@@ -13,6 +13,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Digits;
@@ -63,6 +64,9 @@ public class Order implements Serializable{
 	public void addDesign(Taco design) {
 		this.tacos.add(design);
 	}
+
+	@ManyToOne
+	private User user;
 	
 	@PrePersist
 	void placedAt() {
